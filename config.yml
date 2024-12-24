@@ -1,0 +1,20 @@
+version: "3.1"
+
+language: "en"
+
+# NLU Pipeline
+pipeline:
+- name: "SpacyNLP"
+  model: "en_core_web_trf"
+- name: "SpacyEntityExtractor"
+- name: "DIETClassifier"
+  epochs: 100
+- name: "EntitySynonymMapper"
+- name: "ResponseSelector"
+  epochs: 50
+
+# Policies
+policies:
+- name: "MemoizationPolicy"
+- name: "RulePolicy"
+assistant_id: 20241222-222445-wicker-tag

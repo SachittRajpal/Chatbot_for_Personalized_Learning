@@ -1,0 +1,23 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi
+      - Hey there
+      - Good morning
+
+  - intent: subject_query
+    examples: |
+      - Tell me about maths
+      - What is science?
+      - Explain English literature
+      - What is the importance of biology?
+      - Can you help me with algebra?
+
+  - intent: collect_feedback
+    examples: |
+      - I like it
+      - I didn't like it
+      - It was helpful
+      - It needs improvement
